@@ -4,9 +4,11 @@ def factorial(n, method="iterative"):
         for i in range(1, n + 1):
             result *= i
         return result
-    else:
-        # Placeholder for recursive method
-        pass
+    elif method == "recursive":
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * factorial(n - 1, method="recursive")
 
 if name == "__main__":
     number = 5
